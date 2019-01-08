@@ -16,7 +16,7 @@ gulp
 
 ```
 
-利用<code style="color: red">gulp、gulp.spritesmith</code>库把png格式的图片合并为雪碧图
+利用<span style="color: red;">gulp、gulp.spritesmith</span>库把png格式的图片合并为雪碧图
 
 ```js
 var gulp=require("gulp"),
