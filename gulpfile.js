@@ -8,6 +8,13 @@ var gulp=require("gulp"),
  * 
  */
 
+ /**
+ * 
+ * 注释2：cssTemplate 是生成css的模板文件可以是字符串也可以是函数。
+ * 是字符串是对于相对于的模板地址 对于模板文件样式格式是：
+ * 
+ */
+
 gulp.task('default', function () {
 
     return gulp.src('images/*.png')//需要合并的图片地址
@@ -16,7 +23,8 @@ gulp.task('default', function () {
             cssName: 'css/sprite.css',//保存合并后对于css样式的地址
             padding:5,//合并时两个图片的间距
             algorithm: 'top-down',//注释1
-            cssTemplate: function (data) {
+            cssTemplate:"css/handlebarsStr.css"
+            /*cssTemplate: function (data) {  //注释2
                 var arr=[];
                 data.sprites.forEach(function (sprite) {
                     arr.push(".icon-"+sprite.name+
@@ -28,7 +36,7 @@ gulp.task('default', function () {
                     "}\n");
                 });
                 return arr.join("");
-            }
+            }*/
 
         }))
         .pipe(gulp.dest('dist/'));
