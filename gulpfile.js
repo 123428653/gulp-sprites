@@ -1,6 +1,13 @@
 var gulp=require("gulp"),
     spritesmith=require('gulp.spritesmith');
 
+/**
+ * 
+ * 注释1：此选项有5种生成图片排列的方式分别为: 
+ * top-down、left-rught、diagonal、alt-diagonal、binary-tree
+ * 
+ */
+
 gulp.task('default', function () {
 
     return gulp.src('images/*.png')//需要合并的图片地址
